@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String Modifier</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      max-width: 400px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+    }
+    input, button {
+      margin: 10px 0;
+      padding: 10px;
+      width: 100%;
+      font-size: 16px;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Add "JavaScript" to Your String</h2>
+
+    <!-- Input field -->
+    <input type="text" id="userString" placeholder="Enter your string here" required>
+
+    <!-- Button to modify the string -->
+    <button onclick="addJavaScript()">Add JavaScript</button>
+
+    <!-- Display the result -->
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function addJavaScript() {
+      // Get the user's input
+      const inputString = document.getElementById('userString').value;
+
+      // Create the new string by adding "JavaScript" in front
+      const newString = "JavaScript " + inputString;
+
+      // Display the result
+      document.getElementById('result').textContent = `Modified String: ${newString}`;
+    }
+  </script>
+</body>
+</html>
